@@ -2,12 +2,8 @@ define([], function () {
 
   'use strict';
 
-  function emptyTextNode(node) {
+  function isEmptyTextNode(node) {
     return (node.nodeType === Node.TEXT_NODE && node.textContent === '');
-  }
-
-  function selectionMarkerNode(node) {
-    return (node.nodeType === Node.ELEMENT_NODE && node.className === 'scribe-marker');
   }
 
   function insertAfter(newNode, referenceNode) {
@@ -19,8 +15,7 @@ define([], function () {
   }
 
   return {
-    emptyTextNode: emptyTextNode,
-    selectionMarkerNode: selectionMarkerNode,
+    isEmptyTextNode: isEmptyTextNode,
     insertAfter: insertAfter,
     removeNode: removeNode
   };
