@@ -9,6 +9,10 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
     return contains(blockElementNames, node.nodeName);
   }
 
+  function isSelectionMarkerNode(node) {
+    return (node.nodeType === Node.ELEMENT_NODE && node.className === 'scribe-marker');
+  }
+
   function unwrap(node, childNode) {
     while (childNode.childNodes.length > 0) {
       node.insertBefore(childNode.childNodes[0], childNode);
@@ -18,6 +22,7 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
 
   return {
     isBlockElement: isBlockElement,
+    isSelectionMarkerNode: isSelectionMarkerNode,
     unwrap: unwrap
   };
 
