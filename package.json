@@ -1,5 +1,6 @@
 {
   "name": "scribe-common",
+  "description": "Common libraries for the Scribe editor and its plugins",
   "version": "0.0.5",
   "dependencies": {
     "lodash-amd": "~2.4.1"
