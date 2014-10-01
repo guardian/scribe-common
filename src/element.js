@@ -13,6 +13,10 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
     return (node.nodeType === Node.ELEMENT_NODE && node.className === 'scribe-marker');
   }
 
+  function isCaretPositionNode(node) {
+    return (node.nodeType === Node.ELEMENT_NODE && node.className === 'caret-position');
+  }
+
   function unwrap(node, childNode) {
     while (childNode.childNodes.length > 0) {
       node.insertBefore(childNode.childNodes[0], childNode);
