@@ -12,7 +12,7 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
   }
 
   function isAllowedEmptyElement(node) {
-    return contains(allowedEmptyElements, node);
+    return contains(allowedEmptyElements, node.nodeName);
   }
 
   function isSelectionMarkerNode(node) {
