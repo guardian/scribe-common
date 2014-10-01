@@ -27,6 +27,7 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
   return {
     isBlockElement: isBlockElement,
     isSelectionMarkerNode: isSelectionMarkerNode,
+    isCaretPositionNode: isCaretPositionNode,
     unwrap: unwrap
   };
 
