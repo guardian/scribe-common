@@ -5,14 +5,8 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
   // TODO: not exhaustive?
   var blockElementNames = ['P', 'LI', 'DIV', 'BLOCKQUOTE', 'UL', 'OL', 'H1',
                            'H2', 'H3', 'H4', 'H5', 'H6', 'TABLE', 'TH', 'TD'];
-  var allowedEmptyElements = ['B', 'I'];
-
   function isBlockElement(node) {
     return contains(blockElementNames, node.nodeName);
-  }
-
-  function isAllowedEmptyElement(node) {
-    return contains(allowedEmptyElements, node.nodeName);
   }
 
   function isSelectionMarkerNode(node) {
@@ -28,7 +22,6 @@ define(['lodash-amd/modern/collections/contains'], function (contains) {
 
   return {
     isBlockElement: isBlockElement,
-    isAllowedEmptyElement: isAllowedEmptyElement,
     isSelectionMarkerNode: isSelectionMarkerNode,
     unwrap: unwrap
   };
