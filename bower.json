@@ -1,6 +1,6 @@
 {
   "name": "scribe-common",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "dependencies": {
     "lodash-amd": "2.4.1"
   }
